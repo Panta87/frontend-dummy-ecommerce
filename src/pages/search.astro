@@ -1,0 +1,8 @@
+---
+import SearchResults from "../components/SearchResults";
+import PagesLayout from "../layouts/PagesLayout.astro";
+---
+
+<PagesLayout title="Search Results">
+  <SearchResults client:only="react" />
+</PagesLayout>

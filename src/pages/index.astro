@@ -1,0 +1,18 @@
+---
+import PhotoSlider from "../components/PhotoSlider";
+import ProductList from "../components/ProductList";
+import PagesLayout from "../layouts/PagesLayout.astro";
+---
+
+<PagesLayout title="E-Commerce Products" hideBackButton="true">
+  <div class="border-b-[30px] border-gray-200">
+    <PhotoSlider client:load />
+  </div>
+  <div class="bg-gray-200 pb-5">
+    <ProductList
+      client:load
+      showRandomSubset={true}
+      numberOfProductsToShow={20}
+    />
+  </div>
+</PagesLayout>

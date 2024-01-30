@@ -1,0 +1,66 @@
+---
+import React from "react";
+import ImageSlider from "../../components/Slider";
+import PagesLayout from "../../layouts/PagesLayout.astro";
+import Button from "../../components/AddToCardButton";
+import { productsApiUrl } from "../../utils/apiConstants";
+
+const { id } = Astro.params;
+const response = await fetch(`${productsApiUrl}/${id}`); 
+const product = await response.json();
+
+const discountedPrice =
+  product.price - (product.price * product.discountPercentage) / 100;
+
+---
+
+<PagesLayout>
+  <div class="flex bg-gray-200 p-6 rounded-lg shadow-md w-[80%] mx-auto">
+    <div class="flex-shrink-0 w-1/2">
+      <ImageSlider client:only="react" images={product.images || []} />
+    </div>
+    <div class="container mx-auto p-4 w-1/2">
+      <h2
+        class="text-3xl font-bold text-gray-800 mb-4 border-b-2 border-gray-500"
+      >
+        {product.title}
+      </h2>
+      <p class="text-gray-600 mb-4 line-clamp-2">{product.description}</p>
+      <p class="text-lg text-gray-600 mb-2">
+        <span class="font-bold">Category: </span>
+        {product.category}
+      </p>
+      <p class="text-lg text-gray-600 mb-2">
+        <span class="font-bold">Brand:  </span>
+        {product.brand}
+      </p>
+      <div class="mt-5 mb-5 bg-gray-100 p-3">
+        <div class="flex gap-3">
+          <p class="text-lg text-gray-600 mb-2 line-through">
+            Price: ${product.price}
+          </p>
+          <p class="text-lg text-gray-600 mb-2">
+            Discount: {product.discountPercentage}% off
+          </p>
+        </div>
+        <p class="text-xl font-bold text-green-600 mb-2">
+          New Price: ${discountedPrice.toFixed(2)}
+        </p>
+      </div>
+      <div class="flex justify-between items-center">
+        <div>
+          <p class="text-lg text-gray-600 mb-2">
+            <span class="font-bold">Rating: </span>{product.rating}
+          </p>
+          <p class="text-lg text-gray-600 mb-2">
+            <span class="font-bold">Stock: </span>
+            {product.stock}
+          </p>
+        </div>
+          <Button client:only="react" data={{ id: product.id, name: product.title, price: discountedPrice, thumbnail:product.thumbnail }}>
+            Add To Cart
+           </Button>
+      </div>
+    </div>
+  </div>
+</PagesLayout>
