@@ -1,4 +1,12 @@
-# Astro Starter Kit: Minimal
+# Dummmy E-Commerce Store, Astro, ReactJS, Tailwind and Dummy Rest API
+
+## Login with:  
+
+             username: 'atuny0',
+             password: '9uQFF1Lh',
+             
+             username: 'kminchelle',
+             password: '0lelplR';
 
 ```sh
 npm create astro@latest -- --template minimal
