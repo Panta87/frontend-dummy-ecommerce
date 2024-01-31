@@ -5,42 +5,41 @@ import { RxDotFilled } from "react-icons/rx";
 function PhotoSlider() {
   const slides = [
     {
-      url: "public/image1.jpg",
+      url: "/image1.jpg",
     },
     {
-      url: "public/image2.jpg",
+      url: "/image2.jpg",
     },
     {
-      url: "public/image3.jpg",
-    },
-
-    {
-      url: "public/image4.jpg",
-    },
-    {
-      url: "public/image5.jpg",
-    },
-    {
-      url: "public/image6.jpg",
-    },
-    {
-      url: "public/image7.jpg",
-    },
-    {
-      url: "public/image8.jpg",
+      url: "/image3.jpg",
     },
 
     {
-      url: "public/image9.jpg",
+      url: "/image4.jpg",
     },
     {
-      url: "public/image10.jpg",
+      url: "/image5.jpg",
     },
     {
-      url: "public/image11.jpg",
+      url: "/image6.jpg",
+    },    {
+      url: "/image7.jpg",
     },
     {
-      url: "public/image12.jpg",
+      url: "/image8.jpg",
+    },
+
+    {
+      url: "/image9.jpg",
+    },
+    {
+      url: "/image10.jpg",
+    },
+    {
+      url: "/image11.jpg",
+    },
+    {
+      url: "/image12.jpg",
     },
   ];
 

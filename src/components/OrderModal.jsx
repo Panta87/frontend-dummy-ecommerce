@@ -226,13 +226,13 @@ const OrderModal = ({ isOpen, onClose, handleClearCart, totalPrice }) => {
             </div>
 
             <div className="flex items-center ">
-              <img src="/public/Visa.png" alt="Visa" className=" w-14 h-10" />
-              <img src="/public/Mastercard.png" alt="MasterCard" className=" w-14 h-10"/>
-              <img src="/public/PayPal.png" alt="PayPal" className="w-14 h-10"/>
-              <img src="/public/ApplePay.png" alt="ApplePay" className="w-14 h-10"/>
-              <img src="/public/Bitcoin.png" alt="Bitcoin" className="w-14 h-10" />
-              <img src="/public/GooglePay.png" alt="GooglePay" className="w-14 h-10"/>
-              <img src="/public/Skrill.png" alt="Skrill" className="w-14 h-10"/>
+              <img src="/Visa.png" alt="Visa" className=" w-14 h-10" />
+              <img src="/Mastercard.png" alt="MasterCard" className=" w-14 h-10"/>
+              <img src="/PayPal.png" alt="PayPal" className="w-14 h-10"/>
+              <img src="/ApplePay.png" alt="ApplePay" className="w-14 h-10"/>
+              <img src="/Bitcoin.png" alt="Bitcoin" className="w-14 h-10" />
+              <img src="/GooglePay.png" alt="GooglePay" className="w-14 h-10"/>
+              <img src="/Skrill.png" alt="Skrill" className="w-14 h-10"/>
             </div>
           </div>
         </div>
